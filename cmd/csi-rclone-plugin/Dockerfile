@@ -1,4 +1,7 @@
 FROM alpine:3.16
+
+LABEL org.opencontainers.image.source=https://github.com/janslow/csi-rclone
+
 RUN apk add --no-cache ca-certificates bash fuse fuse3 curl unzip tini
 
 RUN curl https://rclone.org/install.sh | bash
